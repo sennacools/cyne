@@ -1,0 +1,61 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>CYNÉ, design 2: project index</title><link rel="icon" href="../images/logo/favicon.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400&display=swap" rel="stylesheet"><style>
+:root{--paper:#f7f4ef;--paper-2:#edeae3;--bar:#1f1d1b;--night:#2b2825;--ink:#1a1614;--ink-soft:#3a3430;--muted:#7a7068;--moon:#eee8de;--line:rgba(26,22,20,.16);
+--serif:"Cormorant Garamond",Garamond,"Times New Roman",serif;--sans:"Jost","Helvetica Neue",Arial,sans-serif;--ease:cubic-bezier(.22,.61,.36,1);
+--shadow:0 1px 2px rgba(40,28,18,.06),0 14px 28px -12px rgba(40,28,18,.22),0 40px 70px -40px rgba(40,28,18,.35)}
+*,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-weight:300;font-size:1.125rem;line-height:1.75;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}a{color:inherit;text-decoration:none}
+p{text-wrap:pretty}h1,h2,h3{text-wrap:balance}
+.serif{font-family:var(--serif);font-weight:300}
+.label{font-size:.82rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.tlink{display:inline-block;font-size:.88rem;letter-spacing:.2em;text-transform:uppercase;padding-bottom:.3rem;border-bottom:1px solid currentColor;transition:opacity .3s}
+.tlink:hover{opacity:.6}
+.pill a{display:inline-block;padding:.55rem 1.1rem;border-radius:999px;transition:background .35s var(--ease),box-shadow .35s var(--ease),transform .35s var(--ease)}
+.pill a:hover{background:rgba(238,232,222,.16);box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 10px 24px -8px rgba(0,0,0,.7);transform:translateY(-1px)}
+.pill a.on{background:rgba(238,232,222,.1)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+.hd{background:var(--bar);color:var(--moon)}.hd-in{max-width:1440px;margin:0 auto;padding:1rem clamp(1.25rem,4vw,3.5rem);display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:.9rem}.brand img{height:70px;width:auto}.brand span{font-family:var(--serif);font-size:1.8rem;letter-spacing:.26em}
+.hd nav{display:flex;gap:.3rem;font-size:1.05rem;letter-spacing:.12em}
+.wrap{max-width:1440px;margin:0 auto;padding:0 clamp(1.25rem,4vw,3.5rem)}
+@media (max-width:860px){.hd nav{display:none}}
+.hero{display:grid;grid-template-columns:1fr auto;align-items:end;gap:3rem;padding:clamp(4rem,9vw,8rem) 0 clamp(3rem,6vw,5rem)}
+.hero h1{font-family:var(--serif);font-weight:300;font-size:clamp(3.2rem,8vw,8rem);line-height:.98;letter-spacing:-.01em;margin:0;max-width:12ch}
+.hero img{height:clamp(160px,22vw,300px);width:auto;filter:drop-shadow(14px 20px 18px rgba(40,28,18,.2))}
+.lede{display:grid;grid-template-columns:1fr 1fr;gap:3rem;border-top:1px solid var(--line);padding:2rem 0 clamp(4rem,8vw,7rem)}
+.lede p{margin:0;color:var(--ink-soft);max-width:46ch}
+.index{list-style:none;margin:1rem 0 0;padding:0;border-top:1px solid var(--ink)}
+.index li a{display:grid;grid-template-columns:1fr auto auto;align-items:baseline;gap:2rem;padding:1.6rem 0;border-bottom:1px solid var(--line);transition:padding .5s var(--ease)}
+.index h2{font-family:var(--serif);font-weight:300;font-size:clamp(2.4rem,5.5vw,5rem);line-height:1;margin:0}
+.index .n{color:var(--muted);font-size:.95rem}
+.index li a:hover{padding-left:1.5rem}.index li a:hover h2{font-style:italic}
+.thumb{display:none}
+.preview{position:fixed;left:0;top:0;width:min(34vw,460px);aspect-ratio:4/3;pointer-events:none;z-index:40;opacity:0;transform:translate(-50%,-50%) scale(.92);transition:opacity .35s var(--ease),transform .35s var(--ease);box-shadow:0 30px 60px -20px rgba(0,0,0,.45);overflow:hidden}
+.preview.on{opacity:1;transform:translate(-50%,-50%) scale(1)}.preview img{width:100%;height:100%;object-fit:cover}
+.strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;padding:clamp(5rem,10vw,8rem) 0}
+.strip img{aspect-ratio:3/4;object-fit:cover;box-shadow:var(--shadow);transition:transform .6s var(--ease)}.strip a:hover img{transform:translateY(-6px)}
+.strip figcaption{font-size:.9rem;color:var(--muted);margin-top:.7rem}.strip figure{margin:0}
+.duo{display:grid;grid-template-columns:1fr 1fr;background:var(--night);color:var(--moon)}
+.duo>div{padding:clamp(3rem,7vw,6rem) clamp(1.25rem,4vw,3.5rem)}
+.duo .serif{font-size:clamp(2rem,3.4vw,3rem);line-height:1.2;margin:0 0 1.5rem}.duo p{color:rgba(238,232,222,.78);max-width:44ch}
+.duo img{max-height:340px;width:auto;margin:auto}
+@media (max-width:860px){.hero{grid-template-columns:1fr}.hero img{order:-1}.lede,.duo{grid-template-columns:1fr}
+.index li a{grid-template-columns:1fr}.thumb{display:block;margin-top:1rem;aspect-ratio:16/9;object-fit:cover}.preview{display:none}.strip{grid-template-columns:repeat(2,1fr)}}
+.ft{background:var(--bar);color:var(--moon);padding:3.5rem clamp(1.25rem,4vw,3.5rem)}
+.ft-in{max-width:1440px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.ft-brand{display:flex;align-items:center;gap:.9rem}.ft-brand img{height:70px;width:auto}.ft-brand span{font-family:var(--serif);font-size:1.7rem;letter-spacing:.24em}
+.ft nav{display:flex;flex-wrap:wrap;gap:.2rem}.ft p{margin:0;color:rgba(238,232,222,.6);font-size:.95rem}</style></head><body><header class="hd"><div class="hd-in"><a class="brand" href="../index.html"><img src="../images/logo/cyne-swan-light.png" alt=""><span>CYNÉ</span></a><nav class="pill"><a href="../index.html" class=on>home</a><a href="../projects.html">projects</a><a href="../about.html">about us</a><a href="../contact.html">contact us</a></nav></div></header>
+<main class="wrap"><section class="hero"><h1>Timeless spaces with a <em>character</em> of their own</h1><img src="../images/logo/cyne-swan-dark.png" alt=""></section>
+<section class="lede"><p class="label">Interior architecture · Spatial design · Scenography</p><p>Each project begins with the people who will experience it. We pay as much attention to what the light reveals as to what a little shadow lets you discover slowly.</p></section>
+<p class="label">Projects</p><ul class="index"><li><a href="../project.html?p=courtyard-house" data-img="../images/projects/courtyard-house/render-1-living-dining.jpg"><h2>Courtyard House</h2><span class="n">Interior architecture</span><span class="n">4 renders</span><img class="thumb" src="../images/projects/courtyard-house/render-1-living-dining.jpg" alt="" loading="lazy"></a></li><li><a href="../project.html?p=casa-tropical" data-img="../images/projects/casa-tropical/render-1-living-room.jpg"><h2>Casa Tropical</h2><span class="n">Interior architecture</span><span class="n">2 renders</span><img class="thumb" src="../images/projects/casa-tropical/render-1-living-room.jpg" alt="" loading="lazy"></a></li><li><a href="../project.html?p=moonlit-suite" data-img="../images/projects/moonlit-suite/render-1-bedroom.jpg"><h2>Moonlit Suite</h2><span class="n">Interior architecture</span><span class="n">2 renders</span><img class="thumb" src="../images/projects/moonlit-suite/render-1-bedroom.jpg" alt="" loading="lazy"></a></li></ul>
+<section class="strip"><a href="../project.html?p=courtyard-house"><figure><img src="../images/projects/courtyard-house/render-2-entrance-hall.jpg" alt="Entrance hall" loading="lazy"><figcaption>Courtyard House, entrance hall</figcaption></figure></a><a href="../project.html?p=casa-tropical"><figure><img src="../images/projects/casa-tropical/render-2-dining-room.jpg" alt="Dining room" loading="lazy"><figcaption>Casa Tropical, dining room</figcaption></figure></a><a href="../project.html?p=courtyard-house"><figure><img src="../images/projects/courtyard-house/render-4-study.jpg" alt="Study" loading="lazy"><figcaption>Courtyard House, study</figcaption></figure></a><a href="../project.html?p=moonlit-suite"><figure><img src="../images/projects/moonlit-suite/render-2-bedroom-view.jpg" alt="View through the screen" loading="lazy"><figcaption>Moonlit Suite, view through the screen</figcaption></figure></a></section></main>
+<section class="duo"><div><p class="label" style="color:rgba(238,232,222,.6)">Cygne de Lune</p><p class="serif">A swan in shadow, the light of the moon.</p><p>Founded by interior architect Christina García. Her European roots, Latina heritage and love of Asian culture shape the way she thinks about space.</p><a class="tlink" href="../about.html">about us</a></div>
+<div style="display:grid;place-items:center"><img src="../images/logo/cyne-swan-light.png" alt=""></div></section>
+<footer class="ft"><div class="ft-in"><div class="ft-brand"><img src="../images/logo/cyne-swan-light.png" alt=""><span>CYNÉ</span></div>
+<nav class="pill"><a href="../index.html">home</a><a href="../projects.html">projects</a><a href="../about.html">about us</a><a href="../contact.html">contact us</a></nav><p>info@cyne.be · Belgium</p></div></footer>
+<div class="preview" aria-hidden="true"><img alt=""></div><script>
+const pv=document.querySelector('.preview'),pi=pv.querySelector('img');
+document.querySelectorAll('.index a').forEach(a=>{a.addEventListener('mouseenter',()=>{pi.src=a.dataset.img;pv.classList.add('on')});a.addEventListener('mouseleave',()=>pv.classList.remove('on'))});
+addEventListener('mousemove',e=>{pv.style.left=(innerWidth*0.62)+'px';pv.style.top=e.clientY+'px'});
+</script></body></html>
